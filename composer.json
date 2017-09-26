@@ -1,0 +1,17 @@
+{
+    "name": "everlutionsk/ajaxcom-php",
+    "description": "Ajaxcom PHP library",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Everlution\\Ajaxcom\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {"name": "Everlution s.r.o.", "email": "support@everlution.sk"}
+    ]
+}
