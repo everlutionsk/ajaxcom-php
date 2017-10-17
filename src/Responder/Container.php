@@ -41,14 +41,6 @@ class Container extends AbstractResponder
         return $this;
     }
 
-    public function replaceWith(string $html): self
-    {
-        $this->setOption(self::OPTION_VALUE, $html);
-        $this->setOption(self::OPTION_METHOD, 'replaceWith');
-
-        return $this;
-    }
-
     public function replace(string $html): self
     {
         $this->setOption(self::OPTION_VALUE, $html);
