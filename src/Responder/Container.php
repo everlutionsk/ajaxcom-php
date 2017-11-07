@@ -21,6 +21,7 @@ class Container extends AbstractResponder
         $this->registerOption(self::OPTION_VALUE);
         $this->registerOption(self::OPTION_TARGET);
         $this->registerOption(self::OPTION_METHOD);
+        $this->registerOption(self::OPTION_ATTR);
 
         $this->setOption(self::OPTION_TARGET, $identifier);
     }
@@ -37,6 +38,22 @@ class Container extends AbstractResponder
     {
         $this->setOption(self::OPTION_VALUE, $html);
         $this->setOption(self::OPTION_METHOD, 'prepend');
+
+        return $this;
+    }
+
+    public function insertBefore(string $html)
+    {
+        $this->setOption(self::OPTION_VALUE, $html);
+        $this->setOption(self::OPTION_METHOD, 'insertBefore');
+
+        return $this;
+    }
+
+    public function insertAfter(string $html)
+    {
+        $this->setOption(self::OPTION_VALUE, $html);
+        $this->setOption(self::OPTION_METHOD, 'insertAfter');
 
         return $this;
     }
